@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- *************dynamic change*****************
+<body>
+    <script>
+        function fn1(){
+            alert(document.getElementById("tx1").value);
+            var str=document.getElementById("tx2").value;
+            alert(str);
+        }
+
+    </script>
+    <input type="text" id="tx1" placeholder="enter name"><br>
+    <input type="text" id="tx2" placeholder="enter phone"><br>
+    <button onclick="fn1()">click me</button>
+</body> -->
+ <body>
+    <script>
+        function fn2(){
+            if (rd1.checked==true)
+            alert(document.getElementById("rd1").value);
+            else if (rd2.checked==true)
+            alert(rd2.value);
+            else if(rd3.checked==true)
+            alert(rd3.value);
+            else alert("null")
+    }
+
+    </script>
+    <input type="radio" name="rd" id="rd1" value="Shivani">Shivani</input>
+    <input type="radio" name="rd" id="rd2" value="mani">mani</input>
+    <input type="radio" name="rd" id="rd3" value="Sarvani">Sarvani</input>
+
+    <button onclick="fn2()">click me</button>
+</body> 
+
+
+</html>

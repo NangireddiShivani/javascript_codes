@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <!-- <body>
+    <script>
+        function fn1(){
+        //  var regx=/E00/;
+        
+        // var regx=/[0-5][a-b][A-Z]/;
+         var regx=/[^124][A-J]/;
+        //  ^ -not include
+
+
+         if(regx.test(document.getElementById("txt1").value)){
+            alert("valid formate")
+            return false;
+       
+         }
+         else{
+            alert("invalid formate");
+            document.getElementById("lab").style.visibility="visible";
+            return false;
+
+         }
+
+        }
+        
+
+    </script>
+    <form  onsubmit=" return fn1()">
+        <input  id="txt1" type="text" placeholder="enter your name">
+        <label style="color: red; visibility: hidden" id="lab" for="">invalid  </label>
+        <br><br>
+        <input id="txt2" type="email" placeholder="entet email"><br><br>
+        <button >insert</button>
+    </form>
+    
+</body>  -->
+
+<!-- \d=match all the digits
+\w=match all the words that include a-z.A-Z,&,_
+\s=match all the spaces and tabs
+\t=match all the tabs -->
+ <body>
+    <script>
+        function fn2(){
+            // regx=/^[6-9]\d{9}$/;
+            // ^ must start with that particular range
+            // & ending of the string
+            var regx=/^[a-zA-Z0-9\._]+@[a-zA-Z0-9]+.[a-z]{2,20}.?[a-z]{2,20}?$/;
+
+            // 2.8=. must be of any character @ _.
+            // \. means i will take . only
+            // if we dont know range then give + it will take atleast 1 to multiple
+            // ? for expetions(optional)
+            if(regx.test(document.getElementById("phone").value)){
+                document.getElementById("lab1").innerHTML="valid";
+                document.getElementById("lab1").style.visibility="visible";
+                document.getElementById("lab1").style.color="green";
+                return false;
+            }
+            else{
+                document.getElementById("lab1").innerHTML="invalid";
+                document.getElementById("lab1").style.visibility="visible";
+                document.getElementById("lab1").style.color="red";
+                 return false;
+            }
+        }
+
+    </script>
+    <form action="" onsubmit=" return fn2()">
+        <input type="text" placeholder="enter email" id="phone">
+        <label for="" id="lab1" style="visibility: hidden;">valid</label><br><br>
+        <button>submit</button>
+
+    </form>
+</body> 
+
+</html>

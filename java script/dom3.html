@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn3(){
+            var select=document.getElementById("sel");
+        //    alert(select.options[select.selectedIndex].value);
+        alert(select.options[1].value);
+        }
+
+    </script>
+    <select id="sel">
+        <option  value="mani">mani</option>
+        <option  value="shivani">shivani</option>
+        <option  value="sravanthi">sravanthi</option>
+    </select>
+    <button onclick="fn3()">click me</button>
+</body>
+</html>
